@@ -14,9 +14,9 @@ def cli_arguments():
         os.remove(output_file)
 
     arguments = {
-        "input_file": "input.txt",
-        "rules_file": "rules.txt",
-        "output_file": output_file,
+        "input_file": os.path.join(os.path.dirname(__file__), "input.txt"),
+        "rules_file": os.path.join(os.path.dirname(__file__), "rules.txt"),
+        "output_file": os.path.join(os.path.dirname(__file__), output_file),
         "template": "dark",
         "title": "Fake title",
         "description": "Fake description"
