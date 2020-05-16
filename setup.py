@@ -35,7 +35,7 @@ setup(
     long_description_content_type='text/markdown',
     classifiers=classifiers,
     keywords='log comments',
-    install_requires=[],
+    install_requires=['generic-design-patterns'],
     entry_points={
     'console_scripts': [
         'locom=locom:main',

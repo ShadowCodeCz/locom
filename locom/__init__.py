@@ -53,7 +53,7 @@ class RawRuleIndex(enum.IntEnum):
 
 
 class RuleParser:
-    separator = "\s{4}\s*"
+    separator = r"\s{4}\s*"
 
     def parse(self, raw_rules: list):
         rules = []
