@@ -26,7 +26,7 @@ def cli_arguments():
 
     yield mocked_arguments
 
-    os.remove(output_file)
+    # os.remove(output_file)
 
 
 def test_cli_create_output_file(cli_arguments):
