@@ -6,17 +6,21 @@ import os
 # TODO: Consider using of tmpdir fixture. Carefull with Travis and --basetemp.
 
 
+def current_path(filename):
+    return os.path.join(os.path.dirname(__file__), filename)
+
+
 @pytest.fixture()
 def cli_arguments():
-    output_file = "output.html"
+    output_file = current_path("output.html")
 
     if os.path.exists(output_file):
         os.remove(output_file)
 
     arguments = {
-        "input_file": os.path.join(os.path.dirname(__file__), "input.txt"),
-        "rules_file": os.path.join(os.path.dirname(__file__), "rules.txt"),
-        "output_file": os.path.join(os.path.dirname(__file__), output_file),
+        "input_file": current_path("input.txt"),
+        "rules_file": current_path("rules.txt"),
+        "output_file": output_file,
         "template": "dark",
         "title": "Fake title",
         "description": "Fake description"
@@ -26,7 +30,7 @@ def cli_arguments():
 
     yield mocked_arguments
 
-    # os.remove(output_file)
+    os.remove(output_file)
 
 
 def test_cli_create_output_file(cli_arguments):
