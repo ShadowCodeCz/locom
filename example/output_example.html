@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: monospace;
+        }
+
+        h1 {
+            color: #5c5c5c;
+        }
+
+        .description {
+            font-size: 12px;
+            color: #5c5c5c;
+            margin-bottom: 25px;
+        }
+
+        #logTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 0px solid gray;
+            font-size: 12px;
+            font-family: monospace;
+        }
+
+        #logTable td {
+            text-align: left;
+        }
+
+        #logTable th {
+            background-color: black;
+            color: gray;
+            text-align: center;
+            border-right: 1px solid black;
+        }
+
+        .rowNumber {
+            color: gray;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .log {
+            color: white;
+        }
+
+        .comment {
+            color: #5c5c5c;
+        }
+
+        /* - - - - - - - RED - - - - - - - */
+        .red {
+            border-top: 1px solid #ff0000;
+            border-bottom: 1px solid #ff0000;
+            background: #8c0000;
+        }
+
+        .red .rowNumber {
+            color: black;
+        }
+
+        .red .log {
+            color: white;
+        }
+
+        .red .comment {
+            color: black;
+        }
+
+        /* - - - - - - - BLUE - - - - - - - */
+        .blue {
+            border-top: 1px solid #0000ff;
+            border-bottom: 1px solid #0000ff;
+            background: #00008c;
+        }
+
+        .blue .rowNumber {
+            color: black;
+        }
+
+        .blue .log {
+            color: white;
+        }
+
+        .blue .comment {
+            color: black;
+        }
+
+        /* - - - - - - - GREEN - - - - - - - */
+        .green {
+            border-top: 1px solid #00ff00;
+            border-bottom: 1px solid #00ff00;
+            background: #008c00;
+        }
+
+        .green .rowNumber {
+            color: black;
+        }
+
+        .green .log {
+            color: white;
+        }
+
+        .green .comment {
+            color: black;
+        }
+
+        /* - - - - - - - YELLOW - - - - - - - */
+        .yellow {
+            border-top: 1px solid #ffff00;
+            border-bottom: 1px solid #ffff00;
+            background: #8c8c00;
+        }
+
+        .yellow .rowNumber {
+            color: black;
+        }
+
+        .yellow .log {
+            color: white;
+        }
+
+        .yellow .comment {
+            color: black;
+        }
+
+        /* - - - - - - - GRAY - - - - - - - */
+        .gray {
+            border-top: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+            background: #8c8c8c;
+        }
+
+        .gray .rowNumber {
+            color: black;
+        }
+
+        .gray .log {
+            color: white;
+        }
+
+        .gray .comment {
+            color: black;
+        }
+
+        .tirage {
+            text-align: center;
+        }
+
+        /* - - - - - - - VIOLET - - - - - - - */
+        .violet {
+            border-top: 1px solid #ff00ff;
+            border-bottom: 1px solid #ff00ff;
+            background: #8c008c;
+        }
+
+        .violet .rowNumber {
+            color: black;
+        }
+
+        .violet .log {
+            color: white;
+        }
+
+        .violet .comment {
+            color: black;
+        }
+
+        /* - - - - - - - LOW - - - - - - - */
+        .low {
+            color: #5c5c5c;
+            font-size: 12px;
+        }
+
+        .low .rowNumber {
+            color: #5c5c5c;
+            font-size: 10px;
+        }
+        
+        .low .log {
+            color: #5c5c5c;
+            font-size: 12px;
+        }
+
+        /* - - - - - - - NORMAL - - - - - - - */
+
+        .normal {
+            color: white;
+            font-size: 12px;
+        }
+
+        .normal .rowNumber {
+            color: #5c5c5c;
+            font-size: 10px;
+        }
+
+        .normal .log{
+            color: white;
+            font-size: 12px;
+        }
+
+        .normal .comment {
+            color: #5c5c5c;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Example of rows and comments</h1>
+
+<div class="description">This example shows all possible type of rows and comments.</div>
+
+
+    <table id="logTable">
+        <tr class="header">
+            <th style="width:3%;"></th>
+            <th style="width:63%;"></th>
+            <th style="width:34%;"></th>
+        </tr>
+        
+    <tr class="red">
+        <td class="rowNumber">1</td>
+        <td class="log">Brno
+</td>
+        <td class="comment">red comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">2</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="green">
+        <td class="rowNumber">3</td>
+        <td class="log">Prague
+</td>
+        <td class="comment">green comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">4</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="blue">
+        <td class="rowNumber">5</td>
+        <td class="log">Bratislava
+</td>
+        <td class="comment">blue comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">6</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="yellow">
+        <td class="rowNumber">7</td>
+        <td class="log">Vienna
+</td>
+        <td class="comment">yellow comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">8</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="gray">
+        <td class="rowNumber">9</td>
+        <td class="log">Warsaw
+</td>
+        <td class="comment">gray comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">10</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="violet">
+        <td class="rowNumber">11</td>
+        <td class="log">Berlin
+</td>
+        <td class="comment">violet comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">12</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="low">
+        <td class="rowNumber">13</td>
+        <td class="log">Paris
+</td>
+        <td class="comment">low row and comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">14</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">15</td>
+        <td class="log">Stockholm
+</td>
+        <td class="comment">normal row and comment</td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">16</td>
+        <td class="log">Fake row
+</td>
+        <td class="comment"></td>
+    </tr>
+    
+    <tr class="normal">
+        <td class="rowNumber">18</td>
+        <td class="log">Fake row</td>
+        <td class="comment"></td>
+    </tr>
+    
+    </table>
+    
+
+<div class="tirage"><a href="https://pypi.org/project/locom/">Generated by LOCOM</a></div>
+
+</body>
+</html>

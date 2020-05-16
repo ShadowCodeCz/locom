@@ -1,0 +1,3 @@
+import locom
+
+locom.main()

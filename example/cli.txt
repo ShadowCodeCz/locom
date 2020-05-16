@@ -1,0 +1,1 @@
+locom cli -r rules.txt -i input.txt -o output_example.html  --title "Example of rows and comments" --description "This example shows all possible type of rows and comments."

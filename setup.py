@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 classifiers = [
     'Development Status :: 5 - Production/Stable',
@@ -19,7 +19,10 @@ description = "Log Comments"
 setup(
     name='locom',
     version='0.1',
-    packages=['locom'],
+    packages=find_packages(),
+    package_data={
+        "locom": ["template/*.html"],
+    },
     url='https://github.com/ShadowCodeCz/locom',
     project_urls={
         'Source': 'https://github.com/ShadowCodeCz/locom',
@@ -32,5 +35,10 @@ setup(
     long_description_content_type='text/markdown',
     classifiers=classifiers,
     keywords='log comments',
-    install_requires=[]
+    install_requires=[],
+    entry_points={
+    'console_scripts': [
+        'locom=locom:main',
+    ],
+},
 )

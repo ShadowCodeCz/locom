@@ -1,0 +1,9 @@
+re     Red       red         red comment
+re     Green     green       green comment
+re     Blue      blue        blue comment
+re     Yellow    yellow      yellow comment
+row    8         gray        gray comment
+row    10        violet      violet comment
+re     Low       low         low row and comment
+re     Normal    normal      normal row and comment
+re     Hide      hide

@@ -1,0 +1,9 @@
+re     Brno          red       red comment
+re     Prague        green     green comment
+re     Bratislava    blue      blue comment
+re     Vienna        yellow    yellow comment
+row    9             gray      gray comment
+row    11            violet    violet comment
+re     Paris         low       low row and comment
+re     Stockholm     normal    normal row and comment
+re     Madrid        hide
