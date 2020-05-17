@@ -1,5 +1,5 @@
 # Locom
-Locom is the acronym *log comments*. 
+Locom is the acronym **lo**g **com**ments. 
 It is designed to help with log analysis. 
 
 If you are a tester or systems analyst, you need to go through the logs frequently. 
@@ -64,6 +64,7 @@ re     Madrid        hide
 ```
 locom cli -r rules.txt -i input.txt -o output_example.html  --title "Example of rows and comments" --description "This example shows all possible type of rows and comments."
 ```
+Note: Used Python has to have */Scripts* in the path. 
 
 ### Output HTML: output_example.html
 ![html output example][output_example]
@@ -97,5 +98,5 @@ List of all renders:
 * normal
 * hide
 
-[output_example]: example_img.png "HTML output example"
+[output_example]: https://github.com/ShadowCodeCz/locom/blob/master/example_img.png "HTML output example"
 [example directory]: example/
