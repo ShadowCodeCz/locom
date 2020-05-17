@@ -1,4 +1,12 @@
 # Locom
+
+[![PyPI-Status](https://img.shields.io/pypi/v/locom.svg)](https://pypi.org/project/locom/)
+[![PyPI-Versions](https://img.shields.io/pypi/pyversions/locom.svg)](https://pypi.org/project/locom/)
+[![GitHub issues](https://img.shields.io/github/issues/ShadowCodeCz/locom)](https://github.com/ShadowCodeCz/locom/issues)
+[![Build Status](https://travis-ci.com/ShadowCodeCz/locom.svg?branch=master)](https://travis-ci.com/ShadowCodeCz/locom)
+[![GitHub license](https://img.shields.io/github/license/ShadowCodeCz/locom)](https://github.com/ShadowCodeCz/locom/blob/master/LICENSE)
+
+
 Locom is the acronym **lo**g **com**ments. 
 It is designed to help with log analysis. 
 
@@ -98,5 +106,5 @@ List of all renders:
 * normal
 * hide
 
-[output_example]: https://github.com/ShadowCodeCz/locom/blob/master/example_img.png "HTML output example"
+[output_example]: https://github.com/ShadowCodeCz/locom/blob/master/example_img.png?raw=true "HTML output example"
 [example directory]: example/
