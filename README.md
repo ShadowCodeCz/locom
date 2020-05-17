@@ -22,11 +22,11 @@ pip install locom
 ``` 
 
 ## How it works
-1. Get log file, which needs to be commented on.
+1. Get *log file*, which needs to be commented on.
 
-2. Create *rules* file, which describe comments and highlights of the rows.
+2. Create *rules file*, which describe comments and highlights of the rows.
 
-3. Run locom in command line.
+3. Run *locom* in command line.
 
 4. Get html version of the log with comments and highlights.
 
@@ -107,4 +107,4 @@ List of all renders:
 * hide
 
 [output_example]: https://github.com/ShadowCodeCz/locom/blob/master/example_img.png?raw=true "HTML output example"
-[example directory]: example/
+[example directory]: https://github.com/ShadowCodeCz/locom/tree/master/example
