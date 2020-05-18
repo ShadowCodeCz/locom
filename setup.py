@@ -18,7 +18,7 @@ description = "Log Comments"
 
 setup(
     name='locom',
-    version='0.2.5',
+    version='0.2.6',
     packages=find_packages(),
     package_data={
         "locom": ["template/*.html"],

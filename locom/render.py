@@ -79,6 +79,7 @@ class RowRender:
 
 def fix_escape_sequence(s: str) -> str:
     fixed = s.replace("&", "&amp;")
+    fixed = fixed.replace(" ", "&nbsp;")
     fixed = fixed.replace("<", "&lt;")
     fixed = fixed.replace(">", "&gt;")
     return fixed
