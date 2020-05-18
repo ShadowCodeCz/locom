@@ -12,6 +12,7 @@ from . import render
 # TODO: GUI APP
 # TODO: Review CSS and simplify
 # TODO: Multi lines rules
+# TODO: Add description to the README: how use it in the code not cli
 
 
 class TemplateLoader:
@@ -158,8 +159,10 @@ def main():
                             default="dark",
                             help="The template for output html.")
     cli_parser.add_argument("--title",
+                            default="",
                             help="The title for html output page.")
     cli_parser.add_argument("--description",
+                            default="",
                             help="The description for html output page.")
 
     arguments = parser.parse_args()
