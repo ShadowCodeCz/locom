@@ -6,13 +6,16 @@ from . import parser
 from . import recognizer
 from . import render
 
+# TODO: Add information about templates to README
+# TODO: Add description to the README: how use it in the code not cli
+
+
 # TODO: RecognizedRow is strange. Same for render. Consider rename
 # TODO: Consider using .json config instead of cli arguments
 # TODO: Summary
 # TODO: GUI APP
 # TODO: Review CSS and simplify
 # TODO: Multi lines rules
-# TODO: Add description to the README: how use it in the code not cli
 
 
 class TemplateLoader:
@@ -122,8 +125,8 @@ class LocomCLI:
 
     def _output_file(self):
         if self.setting.output_file == "":
-            parts = self.setting.input_file.split(".")
-            file_without_suffix = "".join(parts[:-1])
+            right_dot_index = self.setting.input_file.rfind(".")
+            file_without_suffix = self.setting.input_file[:right_dot_index]
             file = "%s.html" % file_without_suffix
             return file
         else:
