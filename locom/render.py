@@ -38,8 +38,8 @@ class LogRender:
     template = """
     <table id="logTable">
         <tr class="header">
-            <th style="width:3%%;"></th>
-            <th style="width:63%%;"></th>
+            <th style="width:5%%;"></th>
+            <th style="width:61%%;"></th>
             <th style="width:34%%;"></th>
         </tr>
         %s
