@@ -34,7 +34,7 @@ def cli_arguments():
 
 
 def test_cli_create_output_file(cli_arguments):
-    locom.cli(cli_arguments)
+    locom.cli.run(cli_arguments)
     assert True == os.path.exists(cli_arguments.output_file)
 
 
