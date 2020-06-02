@@ -23,7 +23,12 @@ def cli_arguments():
         "output_file": output_file,
         "template": "dark",
         "title": "Fake title",
-        "description": "Fake description"
+        "description": "Fake description",
+        "row_number_column": "3",
+        "log_column": "3",
+        "mr_column": "2",
+        "cancel_whitespace_protection": True,
+        "cancel_escape_sequence_protection": True
     }
 
     mocked_arguments = argparse.Namespace(**arguments)

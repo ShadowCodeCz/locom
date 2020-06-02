@@ -7,4 +7,4 @@ class ReplacingRender(abstract.AbstractElementRender):
         return True if element.type != base.RenderElementType.rows else False
 
     def handle(self, setting, template, element):
-        return template.replace(self._target_place(element), element.text)
+        return template.replace(self._target_place(element), str(element.text))
