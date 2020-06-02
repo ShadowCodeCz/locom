@@ -168,13 +168,10 @@ class VerticalHighlightRender:
         highlights = ""
 
         if row.rowspan[self.side] == base.continuing_vertical_highlight:
-            print("A %s" % row.text)
             return ""
         if row.rowspan[self.side] == 0:
-            print("B %s" % row.text)
             return "<td></td>"
 
-        print("- - - - C %s" % row.text)
 
         vertical_highlights = [highlight for highlight in row.highlights if highlight.orientation == self.side]
 
