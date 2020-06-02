@@ -1,9 +1,17 @@
-re     Brno          red       red comment
-re     Prague        green     green comment
-re     Bratislava    blue      blue comment
-re     Vienna        yellow    yellow comment
-row    9             gray      gray comment
-row    11            violet    violet comment
-re     Paris         low       low row and comment
-re     Stockholm     normal    normal row and comment
+re     Brno          red             red comment                  img.png
+re     Prague        green           green comment                img.jpg
+re     Bratislava    blue            blue comment                 logo.png
+re     Vienna        yellow          yellow comment               liftoff.jpg
+row    9             gray            gray comment                 moon.bmp
+row    11            violet          violet comment               Prihraty fialovy text.
+re     Paris         low             low row and comment
+re     Stockholm     normal          normal row and comment
 re     Madrid        hide
+row    18            gray:red        AAAA
+row    18            gray:green      BBB
+row    18            gray:blue       CCCC
+row    18            gray:yellow     YELLOW
+row    20-25         right-green:green     Vertical
+row    20-24         right-blue     Vertical
+row    10-25         left-violet     Vertical
+row    20-23,25      gray            Range

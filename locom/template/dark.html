@@ -11,38 +11,73 @@
             background: black;
             color: white;
             font-family: monospace;
+            margin: 0px;
         }
 
         h1 {
             color: #5c5c5c;
         }
 
+        .head {
+            overflow: hidden;
+            background-color: #292929;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 5px;
+            border-bottom: 2px solid #3f3f3f;
+            vertical-align: middle;
+        }
+
+        .title {
+            font-size: 19px;
+            font-weight: bold;
+            color: gray;
+        }
+
+        .generated-from-file {
+            font-size: 10px;
+            color: gray;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            vertical-align: middle;
+        }
+
+        .generated-from-file a{
+            font-size: 10px;
+            color: gray;
+            text-decoration: none;
+        }
+
         .description {
             font-size: 12px;
             color: #5c5c5c;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
+            margin-top: 45px;
         }
 
-        #logTable {
+        #full-log-table {
             border-collapse: collapse;
             width: 100%;
             border: 0px solid gray;
             font-size: 12px;
             font-family: monospace;
+            table-layout: fixed;
         }
 
-        #logTable td {
+        #full-log-table td {
             text-align: left;
         }
 
-        #logTable th {
+        #full-log-table th {
             background-color: black;
             color: gray;
             text-align: center;
             border-right: 1px solid black;
         }
 
-        .rowNumber {
+        .row-number {
             color: gray;
             font-size: 10px;
             text-align: center;
@@ -52,175 +87,481 @@
             color: white;
         }
 
-        .comment {
+        .tirage {
+            /*position: absolute;*/
+            /*bottom: 5px;*/
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .unbox-comment {
+            color: #5c5c5c;
+            padding-left: 7px;
+            padding-right: 7px;
+            margin: 1px;
+            margin-right: 3px;
+            float: left;
+            font-weight: bold;
+        }
+
+        .unbox-comment a {
+            text-decoration: none;
             color: #5c5c5c;
         }
 
+        .multi-row {
+            text-align: center;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            margin: auto auto;
+            font-weight: bold;
+        }
+
         /* - - - - - - - RED - - - - - - - */
-        .red {
+        .red-row {
             border-top: 1px solid #ff0000;
             border-bottom: 1px solid #ff0000;
             background: #8c0000;
         }
 
-        .red .rowNumber {
+        .red-row .unbox-comment a {
             color: black;
         }
 
-        .red .log {
-            color: white;
-        }
-
-        .red .comment {
+        .red-row .row-number {
             color: black;
         }
 
-        /* - - - - - - - BLUE - - - - - - - */
-        .blue {
-            border-top: 1px solid #0000ff;
-            border-bottom: 1px solid #0000ff;
-            background: #00008c;
-        }
-
-        .blue .rowNumber {
+        .red-row .unbox-comment {
             color: black;
         }
 
-        .blue .log {
-            color: white;
+        .red-box-comment {
+            border: 1px solid #ff0000;
+            background: #8c0000;
+            color: black;
+            padding: 1px;
         }
 
-        .blue .comment {
+        .red-box-comment a {
             color: black;
+            text-decoration: none;
+        }
+
+        .red-modal-box > div {
+            border: 2px solid red;
+        }
+
+        .red-modal-head {
+            background-color: #8c0000;
+        }
+
+        .red-modal-title {
+            color: black;
+        }
+
+        .red-modal-close-button a {
+            color: black;
+        }
+
+        .red-multi-row {
+            border: 1px solid #ff0000;
+            background: #8c0000;
+            text-align: center;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
         }
 
         /* - - - - - - - GREEN - - - - - - - */
-        .green {
+        .green-row {
             border-top: 1px solid #00ff00;
             border-bottom: 1px solid #00ff00;
             background: #008c00;
         }
 
-        .green .rowNumber {
+        .green-row .unbox-comment a {
             color: black;
         }
 
-        .green .log {
-            color: white;
+        .green-row .row-number {
+            color: black;
         }
 
-        .green .comment {
+        .green-row .unbox-comment {
+            color: black;
+        }
+
+        .green-box-comment {
+            border: 1px solid #00ff00;
+            background: #008c00;
+            color: black;
+            padding: 1px;
+        }
+
+        .green-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .green-modal-box > div {
+            border: 2px solid #00ff00;
+        }
+
+        .green-modal-head {
+            background-color: #008c00;
+        }
+
+        .green-modal-title {
+            color: black;
+        }
+
+        .green-modal-close-button a {
+            color: black;
+        }
+
+        /* - - - - - - - BLUE - - - - - - - */
+        .blue-row {
+            border-top: 1px solid #0000ff;
+            border-bottom: 1px solid #0000ff;
+            background: #0000bf;
+        }
+
+        .blue-row .unbox-comment a {
+            color: black;
+        }
+
+        .blue-box-comment {
+            border: 1px solid #0000ff;
+            background: #0000bf;
+            color: black;
+            padding: 1px;
+        }
+
+        .blue-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .blue-modal-box > div {
+            border: 2px solid #0000ff;
+        }
+
+        .blue-modal-head {
+            background-color: #0000bf;
+        }
+
+        .blue-modal-title {
+            color: black;
+        }
+
+        .blue-modal-close-button a {
             color: black;
         }
 
         /* - - - - - - - YELLOW - - - - - - - */
-        .yellow {
+        .yellow-row {
             border-top: 1px solid #ffff00;
             border-bottom: 1px solid #ffff00;
             background: #8c8c00;
         }
 
-        .yellow .rowNumber {
+        .yellow-row .unbox-comment a {
             color: black;
         }
 
-        .yellow .log {
-            color: white;
+        .yellow-row .row-number {
+            color: black;
         }
 
-        .yellow .comment {
+        .yellow-box-comment {
+            border: 1px solid #ffff00;
+            background: #8c8c00;
+            color: black;
+            padding: 1px;
+        }
+
+        .yellow-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .yellow-modal-box > div {
+            border: 2px solid #ffff00;
+        }
+
+        .yellow-modal-head {
+            background-color: #8c8c00;
+        }
+
+        .yellow-modal-title {
+            color: black;
+        }
+
+        .yellow-modal-close-button a {
             color: black;
         }
 
         /* - - - - - - - GRAY - - - - - - - */
-        .gray {
-            border-top: 1px solid #dcdcdc;
-            border-bottom: 1px solid #dcdcdc;
-            background: #8c8c8c;
+        .gray-row {
+            border-top: 1px solid #525252;
+            border-bottom: 1px solid #525252;
+            background: #272727;
         }
 
-        .gray .rowNumber {
-            color: black;
+        .gray-row .row-number {
+            color: #5c5c5c;
         }
 
-        .gray .log {
-            color: white;
+        .gray-box-comment {
+            border: 1px solid #525252;
+            background: #272727;
+            color: #5c5c5c;
+            padding: 1px;
         }
 
-        .gray .comment {
-            color: black;
+        .gray-box-comment a {
+            color: #5c5c5c;
+            text-decoration: none;
         }
 
-        .tirage {
-            text-align: center;
+        .gray-modal-box > div {
+            border: 2px solid #5c5c5c;
+        }
+
+        .gray-modal-head {
+            background-color: #272727;
+        }
+
+        .gray-modal-title {
+            color: #5c5c5c;
+        }
+
+        .gray-modal-close-button a {
+            color: #5c5c5c;
         }
 
         /* - - - - - - - VIOLET - - - - - - - */
-        .violet {
+        .violet-row {
             border-top: 1px solid #ff00ff;
             border-bottom: 1px solid #ff00ff;
             background: #8c008c;
         }
 
-        .violet .rowNumber {
+        .violet-row .unbox-comment a {
             color: black;
         }
 
-        .violet .log {
-            color: white;
+        .violet-row .row-number {
+            color: black;
         }
 
-        .violet .comment {
+        .violet-row .unbox-comment {
+            color: black;
+        }
+
+        .violet-box-comment {
+            border: 1px solid #ff00ff;
+            background: #8c008c;
+            color: black;
+            padding: 1px;
+        }
+
+        .violet-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .violet-modal-box > div {
+            border: 2px solid #ff00ff;
+        }
+
+        .violet-modal-head {
+            background-color: #8c008c;
+        }
+
+        .violet-modal-title {
+            color: black;
+        }
+
+        .violet-modal-close-button a {
             color: black;
         }
 
         /* - - - - - - - LOW - - - - - - - */
-        .low {
+        .low-row {
             color: #5c5c5c;
             font-size: 12px;
         }
 
-        .low .rowNumber {
+        .low-row .row-number {
             color: #5c5c5c;
             font-size: 10px;
         }
 
-        .low .log {
+        .low-row .log {
             color: #5c5c5c;
             font-size: 12px;
+        }
+
+        .low-row .unbox-comment a {
+            color: #5c5c5c;
+            text-decoration: none;
+        }
+
+        .low-modal-box > div {
+            border: 2px solid #5c5c5c;
+        }
+
+        .low-modal-head {
+            background-color: #272727;
+        }
+
+        .low-modal-title {
+            color: #5c5c5c;
+        }
+
+        .low-modal-close-button a {
+            color: #5c5c5c;
         }
 
         /* - - - - - - - NORMAL - - - - - - - */
-
-        .normal {
+        .normal-row {
             color: white;
             font-size: 12px;
         }
 
-        .normal .rowNumber {
+        .normal-row .row-number {
             color: #5c5c5c;
             font-size: 10px;
         }
 
-        .normal .log{
+        .normal-row .log {
             color: white;
             font-size: 12px;
         }
 
-        .normal .comment {
+        .normal-modal-box > div {
+            border: 2px solid #5c5c5c;
+        }
+
+        .normal-modal-head {
+            background-color: #272727;
+        }
+
+        .normal-modal-title {
             color: #5c5c5c;
-            font-size: 12px;
+        }
+
+        .normal-modal-close-button a {
+            color: #5c5c5c;
+        }
+
+        /* - - - - - - - HIDE - - - - - - - */
+        .hide-row {
+            display: none;
+        }
+
+        /* - - - - - - - OTHERS - - - - - - - */
+        .box-comment-expander {
+            width: auto;
+        }
+
+        /* - - - - - - - MODAL - - - - - - - */
+
+        .modal-box {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .modal-box:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-box > div {
+            width: 75%;
+            position: relative;
+            margin: 10% auto;
+        }
+
+        .modal-head {
+            position: relative;
+            top: 0px;
+            width: 100%;
+        }
+
+        .modal-title {
+            font-size: 19px;
+            padding-left: 5px;
+        }
+
+        .modal-close-button a {
+            font-size: 19px;
+            font-size: bold;
+            text-decoration: none;
+            background: inherit;
+            float: right;
+            padding-right: 5px;
+        }
+
+        .modal-row-view {
+            position: relative;
+            width: 100%;
+            background-color: #222222;
+            color: #5c5c5c;
+            padding-left: 5px;
+            font-weight: bold;
+        }
+
+        .modal-content {
+            padding-left: 5px;
+            padding-right: 5px;
+            background: black;
+            color: white;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .modal-content img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
     </style>
 </head>
 <body>
 
-%%%TITLE%%%
+<div class="head">
+    <span class="title">===TITLE===</span>
+    <span class="generated-from-file"><a href="file:///===SOURCE_FILE===">===SOURCE_FILE===</a></span>
+</div>
 
-%%%DESCRIPTION%%%
+<div class="description">===DESCRIPTION===</div>
 
-%%%LOG%%%
+
+<table id="full-log-table">
+    <col width="===MULTI_ROW_COLUMN===%"/>
+    <col width="===ROW_NUMBER_COLUMN===%"/>
+    <col width="===LOG_COLUMN===%"/>
+    <col width="===COMMENT_COLUMN===%"/>
+    <col width="===MULTI_ROW_COLUMN===%"/>
+
+
+    ===ROWS===
+
+</table>
+
 
 <div class="tirage"><a href="https://pypi.org/project/locom/">Generated by LOCOM</a></div>
 

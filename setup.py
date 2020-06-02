@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 classifiers = [
-    'Development Status :: 5 - Production/Stable',
+    'Development Status :: 2 - Pre-Alpha',
     'Intended Audience :: Developers',
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
@@ -18,7 +18,7 @@ description = "Log Comments"
 
 setup(
     name='locom',
-    version='0.2.6',
+    version='0.3.0',
     packages=find_packages(),
     package_data={
         "locom": ["template/*.html"],
@@ -35,7 +35,7 @@ setup(
     long_description_content_type='text/markdown',
     classifiers=classifiers,
     keywords='log comments',
-    install_requires=['generic-design-patterns'],
+    install_requires=['generic-design-patterns', "Pillow"],
     entry_points={
     'console_scripts': [
         'locom=locom:main',
