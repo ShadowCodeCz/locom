@@ -1,4 +1,5 @@
 import os
+import glob
 
 from . import base
 from . import parser
@@ -10,6 +11,71 @@ from . import render
 def run(arguments):
     app = App(arguments)
     app.run()
+
+
+# def relevant_files(suffixes, path="."):
+#     base_directory = os.path.abspath(path)
+#
+#     files = []
+#
+#     for suffix in suffixes:
+#         files += glob.glob(os.path.join(base_directory, suffix))
+#
+#     return files
+#
+#
+# def rule_file(path):
+#     basename = os.path.basename(path)
+#     return os.path.join(locom_directory(path), basename)
+#
+#
+# def locom_directory(path="."):
+#     dirname = os.path.dirname(path)
+#     return os.path.join(dirname, "locom")
+#
+#
+def auto(arguments):
+    pass
+    # input_files = [InputFile(input_file_path) for input_file_path in CurrentDirectory.input_files(arguments.suffixes)]
+#
+#
+# class CurrentDirectory:
+#     @staticmethod
+#     def input_files(suffixes):
+#         return []
+#
+#
+# class LocomRuleDirectory:
+#     @property
+#     def path(self):
+#         pass
+#
+#     @staticmethod
+#     def create():
+#         pass
+
+
+class InputFile:
+    def __init__(self, path):
+        self.path = path
+
+    @property
+    def rule_file(self):
+        return ""
+
+
+def create_empty_file(path):
+    with open(path, 'a'):
+        os.utime(path, None)
+
+
+def generator(arguments):
+    pass
+    # LocomRuleDirectory.create()
+    # input_files = [InputFile(input_file_path) for input_file_path in CurrentDirectory.input_files(arguments.suffixes)]
+    #
+    # for input_file in input_files:
+    #     create_empty_file(input_file.path)
 
 
 class App:

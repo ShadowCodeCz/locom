@@ -7,11 +7,18 @@ row    11            violet          violet comment               Prihraty fialo
 re     Paris         low             low row and comment
 re     Stockholm     normal          normal row and comment
 re     Madrid        hide
-row    18            gray:red        AAAA
-row    18            gray:green      BBB
-row    18            gray:blue       CCCC
-row    18            gray:yellow     YELLOW
+row    18            gray:red        red
+row    18            gray:green      green
+row    18            gray:blue       blue
+row    18            gray:yellow     yellow
+row    18            gray:orange     orange
+row    18            gray:pink       pink
+row    18            gray:cyan       cyan
+row    18            gray:gray       gray
 row    20-25         right-green:green     Vertical
 row    20-24         right-blue     Vertical
 row    10-25         left-violet     Vertical
 row    20-23,25      gray            Range
+row    27            orange          Orange
+row    29            pink            Pink
+row    31            cyan            Cyan

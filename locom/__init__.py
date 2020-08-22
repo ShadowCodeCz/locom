@@ -2,6 +2,16 @@ import argparse
 
 from . import cli
 
+# TODO: Auto/gen cli
+# TODO: MultiRow & MultiColumn
+# TODO: MultiRow RE
+# TODO: Code Refactor
+# TODO: README # EXAMPLES
+# TODO: Protection whitespaces & CLI options
+# TODO: Fix: Overlap Bug: (row,10 - 20, green) and (row, 10 - 30, left-green)
+# TODO: Fix: Comments layout bug
+# TODO: [OPTIONAL] Cli options & Size font (Size levels ...)
+
 
 def main():
     parser = argparse.ArgumentParser(description="Locom is tool for generation commented log. "
@@ -47,6 +57,16 @@ def main():
     cli_parser.add_argument("--cancel-escape-sequence-protection",
                             default="",
                             help="")
+
+    generator_parser = subparsers.add_parser('gen')
+    generator_parser.set_defaults(func=cli.generator)
+
+    generator_parser.add_argument('--suffixes', type=str, nargs='+', default=["*.txt", "*.log"])
+
+    auto_parser = subparsers.add_parser('auto')
+    auto_parser.set_defaults(func=cli.auto)
+
+    auto_parser.add_argument('--suffixes', type=str, nargs='+', default=["*.txt", "*.log"])
 
     arguments = parser.parse_args()
     arguments.func(arguments)
