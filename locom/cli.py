@@ -136,7 +136,7 @@ class App:
         return [
             base.RenderElement(base.RenderElementType.title, self.settings.title),
             base.RenderElement(base.RenderElementType.source_file, os.path.abspath(self.settings.input_file)),
-            base.RenderElement(base.RenderElementType.description, self.settings.description),
+            base.RenderElement(base.RenderElementType.description, self._description()),
             base.RenderElement(base.RenderElementType.row_number_column, self.settings.row_number_column),
             base.RenderElement(base.RenderElementType.log_column, self.settings.log_column),
             base.RenderElement(base.RenderElementType.comment_column, self._count_comment_column()),
@@ -163,3 +163,18 @@ class App:
             return file
         else:
             return self.settings.output_file
+
+    def _description(self):
+        return self.settings.description + self._read_description_from_file()
+
+    def _read_description_from_file(self):
+        if not os.path.isfile(self.settings.description_file):
+            return ""
+        try:
+            with open(self.settings.description_file) as f:
+                return f.read()
+        except Exception as e:
+            # TODO: print warning
+            return ""
+
+

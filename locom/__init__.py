@@ -42,6 +42,9 @@ def main():
     cli_parser.add_argument("--description",
                             default="",
                             help="The description for html output page.")
+    cli_parser.add_argument("--description-file",
+                            default="",
+                            help="HTML file with description for html output page.")
     cli_parser.add_argument("--row-number-column",
                             default="3",
                             help="The percentage size of row column in output html.")
