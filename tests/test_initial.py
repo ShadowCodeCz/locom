@@ -24,6 +24,7 @@ def cli_arguments():
         "template": "dark",
         "title": "Fake title",
         "description": "Fake description",
+        "description_file": "",
         "row_number_column": "3",
         "log_column": "3",
         "mr_column": "2",
