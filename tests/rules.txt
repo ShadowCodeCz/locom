@@ -22,3 +22,7 @@ row    20-23,25      gray            Range
 row    27            orange          Orange
 row    29            pink            Pink
 row    31            cyan            Cyan
+row    33            navy             Navy
+row    35            mink             Mink
+row    37            tortila          Tortila
+row    39            flax             Flax

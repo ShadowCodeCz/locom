@@ -20,13 +20,44 @@
 
         .head {
             overflow: hidden;
-            background-color: #292929;
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 5px;
-            border-bottom: 2px solid #3f3f3f;
             vertical-align: middle;
+        }
+
+        .head_l1 {
+            overflow: hidden;
+            background-color: #292929;
+            width: 100%;
+            padding: 2px;
+            border-bottom: 1px solid #3f3f3f;
+            vertical-align: middle;
+        }
+
+        .head_l2 {
+            overflow: hidden;
+            background-color: #1a1a1a;
+            width: 100%;
+            padding: 2px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #3f3f3f;
+            vertical-align: middle;
+            font-size: 11px;
+        }
+
+        .heal {
+            overflow: hidden;
+            background-color: #1a1a1a;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 2px;
+            vertical-align: middle;
+            border-top: 1px solid #3f3f3f;
+            font-size: 11px;
+            text-align: center;
         }
 
         .title {
@@ -44,7 +75,7 @@
             vertical-align: middle;
         }
 
-        .generated-from-file a{
+        .generated-from-file a {
             font-size: 10px;
             color: gray;
             text-decoration: none;
@@ -117,11 +148,22 @@
             font-weight: bold;
         }
 
+        .text-panel {
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 7px;
+            margin-right: 7px;
+        }
+
         /* - - - - - - - RED - - - - - - - */
         .red-row {
             border-top: 1px solid #ff0000;
             border-bottom: 1px solid #ff0000;
             background: #8c0000;
+        }
+
+        .red-text-panel {
+            color: #ff0000;
         }
 
         .red-row .unbox-comment a {
@@ -172,15 +214,16 @@
             text-orientation: upright;
         }
 
-
-
         /* - - - - - - - GREEN - - - - - - - */
-
 
         .green-row {
             border-top: 1px solid #00ff00;
             border-bottom: 1px solid #00ff00;
             background: #008c00;
+        }
+
+        .green-text-panel {
+            color: #00ff00;
         }
 
         .green-row .unbox-comment a {
@@ -230,6 +273,10 @@
             background: #0000bf;
         }
 
+        .blue-text-panel {
+            color: #0000ff;
+        }
+
         .blue-row .unbox-comment a {
             color: black;
         }
@@ -267,6 +314,10 @@
             border-top: 1px solid #ffff00;
             border-bottom: 1px solid #ffff00;
             background: #8c8c00;
+        }
+
+        .yellow-text-panel {
+            color: #ffff00;
         }
 
         .yellow-row .unbox-comment a {
@@ -312,6 +363,10 @@
             background: #272727;
         }
 
+        .gray-text-panel {
+            color: #525252;
+        }
+
         .gray-row .row-number {
             color: #5c5c5c;
         }
@@ -349,6 +404,10 @@
             border-top: 1px solid #ff00ff;
             border-bottom: 1px solid #ff00ff;
             background: #8c008c;
+        }
+
+        .violet-text-panel {
+            color: #ff00ff;
         }
 
         .violet-row .unbox-comment a {
@@ -398,6 +457,10 @@
             background: #cb7b00;
         }
 
+        .orange-text-panel {
+            color: #cb7b00;
+        }
+
         .orange-row .unbox-comment a {
             color: black;
         }
@@ -437,12 +500,16 @@
         .orange-modal-close-button a {
             color: black;
         }
-        
+
         /* - - - - - - - PINK - - - - - - - */
         .pink-row {
             border-top: 1px solid #ff81cf;
             border-bottom: 1px solid #ff81cf;
             background: #c63e7d;
+        }
+
+        .pink-text-panel {
+            color: #c63e7d;
         }
 
         .pink-row .unbox-comment a {
@@ -484,12 +551,16 @@
         .pink-modal-close-button a {
             color: black;
         }
-        
-         /* - - - - - - - CYAN - - - - - - - */
+
+        /* - - - - - - - CYAN - - - - - - - */
         .cyan-row {
             border-top: 1px solid #31fffc;
             border-bottom: 1px solid #31fffc;
             background: #00b1b4;
+        }
+
+        .cyan-text-panel {
+            color: #31fffc;
         }
 
         .cyan-row .unbox-comment a {
@@ -531,7 +602,211 @@
         .cyan-modal-close-button a {
             color: black;
         }
-        
+
+        /* - - - - - - - NAVY - - - - - - - */
+        .navy-row {
+            border-top: 1px solid #394eba;
+            border-bottom: 1px solid #394eba;
+            background: #2f3f7f;
+        }
+
+        .navy-text-panel {
+            color: #394eba;
+        }
+
+        .navy-row .unbox-comment a {
+            color: black;
+        }
+
+        .navy-row .row-number {
+            color: black;
+        }
+
+        .navy-row .unbox-comment {
+            color: black;
+        }
+
+        .navy-box-comment {
+            border: 1px solid #394eba;
+            background: #2f3f7f;
+            color: black;
+            padding: 2px;
+        }
+
+        .navy-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navy-modal-box > div {
+            border: 2px solid #394eba;
+        }
+
+        .navy-modal-head {
+            background-color: #2f3f7f;
+        }
+
+        .navy-modal-title {
+            color: black;
+        }
+
+        .navy-modal-close-button a {
+            color: black;
+        }
+
+        /* - - - - - - - MINK - - - - - - - */
+        .mink-row {
+            border-top: 1px solid #bab2ad;
+            border-bottom: 1px solid #bab2ad;
+            background: #7f7772;
+        }
+
+        .mink-text-panel {
+            color: #bab2ad;
+        }
+
+        .mink-row .unbox-comment a {
+            color: black;
+        }
+
+        .mink-row .row-number {
+            color: black;
+        }
+
+        .mink-row .unbox-comment {
+            color: black;
+        }
+
+        .mink-box-comment {
+            border: 1px solid #bab2ad;
+            background: #7f7772;
+            color: black;
+            padding: 2px;
+        }
+
+        .mink-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .mink-modal-box > div {
+            border: 2px solid #bab2ad;
+        }
+
+        .mink-modal-head {
+            background-color: #7f7772;
+        }
+
+        .mink-modal-title {
+            color: black;
+        }
+
+        .mink-modal-close-button a {
+            color: black;
+        }
+
+        /* - - - - - - - TORTILA - - - - - - - */
+        .tortila-row {
+            border-top: 1px solid #ecc890;
+            border-bottom: 1px solid #ecc890;
+            background: #997950;
+        }
+
+        .tortila-text-panel {
+            color: #ecc890;
+        }
+
+        .tortila-row .unbox-comment a {
+            color: black;
+        }
+
+        .tortila-row .row-number {
+            color: black;
+        }
+
+        .tortila-row .unbox-comment {
+            color: black;
+        }
+
+        .tortila-box-comment {
+            border: 1px solid #ecc890;
+            background: #997950;
+            color: black;
+            padding: 2px;
+        }
+
+        .tortila-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .tortila-modal-box > div {
+            border: 2px solid #ecc890;
+        }
+
+        .tortila-modal-head {
+            background-color: #997950;
+        }
+
+        .tortila-modal-title {
+            color: black;
+        }
+
+        .tortila-modal-close-button a {
+            color: black;
+        }
+
+        /* - - - - - - - flax - - - - - - - */
+        .flax-row {
+            border-top: 1px solid #ffed8f;
+            border-bottom: 1px solid #ffed8f;
+            background: #b5a35b;
+        }
+
+        .flax-text-panel {
+            color: #ffed8f;
+        }
+
+        .flax-row .unbox-comment a {
+            color: black;
+        }
+
+        .flax-row .row-number {
+            color: black;
+        }
+
+        .flax-row .unbox-comment {
+            color: black;
+        }
+
+        .flax-box-comment {
+            border: 1px solid #ffed8f;
+            background: #b5a35b;
+            color: black;
+            padding: 2px;
+        }
+
+        .flax-box-comment a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .flax-modal-box > div {
+            border: 2px solid #ffed8f;
+        }
+
+        .flax-modal-head {
+            background-color: #b5a35b;
+        }
+
+        .flax-modal-title {
+            color: black;
+        }
+
+        .flax-modal-close-button a {
+            color: black;
+        }
+
         /* - - - - - - - LOW - - - - - - - */
         .low-row {
             color: #5c5c5c;
@@ -683,17 +958,80 @@
             margin-right: auto;
         }
 
+        /* - - - - - - - TOOLTIP - - - - - - - */
+        .hint {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hint .hint-text {
+            visibility: hidden;
+            background-color: black;
+            border: 1px solid #5c5c5c;
+            color: #5c5c5c;
+            text-align: left;
+            padding: 1px;
+            font-size: 10px;
+            overflow: auto;
+            white-space: nowrap;
+
+            position: absolute;
+            z-index: 1;
+        }
+
+        .hint:hover .hint-text {
+            visibility: visible;
+        }
+
+        .styled {
+            color: #525252;
+        }
+
+        .styled table {
+            color: #525252;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .styled table th {
+            background: #272727;
+        }
+
+        .styled table td {
+            text-align: center;
+            border-bottom: 1px solid #272727;
+        }
+
+
     </style>
 </head>
 <body>
 
 <div class="head">
-    <span class="title">===TITLE===</span>
-    <span class="generated-from-file"><a href="file:///===SOURCE_FILE===">===SOURCE_FILE===</a></span>
+    <div class="head_l1"><span class="title">===TITLE===</span></div>
 </div>
 
 <div class="description">===DESCRIPTION===</div>
 
+<div class="styled">
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+</div>
 
 <table id="full-log-table">
     <col width="===MULTI_ROW_COLUMN===%"/>
@@ -706,6 +1044,21 @@
     ===ROWS===
 
 </table>
+
+<div class="heal">
+    <span class="text-panel red-text-panel">Red</span>
+    <span class="text-panel green-text-panel">Green</span>
+    <span class="text-panel blue-text-panel">Blue</span>
+    <span class="text-panel gray-text-panel">Gray</span>
+    <span class="text-panel violet-text-panel">Violet</span>
+    <span class="text-panel yellow-text-panel">Yellow</span>
+    <span class="text-panel orange-text-panel">Orange</span>
+    <span class="text-panel cyan-text-panel">Cyan</span>
+    <span class="text-panel pink-text-panel">Pink</span>
+    <span class="text-panel navy-text-panel">Navy</span>
+    <span class="text-panel tortila-text-panel">Tortila</span>
+    <span class="text-panel flax-text-panel">Flax</span>
+</div>
 
 
 <div class="tirage"><a href="https://pypi.org/project/locom/">Generated by LOCOM</a></div>
